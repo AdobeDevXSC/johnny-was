@@ -343,7 +343,6 @@ function aggregateTabSectionsIntoComponents(main) {
 async function loadEager(doc) {
 	document.documentElement.lang = 'en';
 	decorateTemplateAndTheme();
-	loadHeader(doc.querySelector('header'));
 
 	if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
 	  document.body.classList.add('breadcrumbs-enabled');
@@ -424,7 +423,8 @@ async function loadLazy(doc) {
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
-
+  
+  loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
