@@ -11,18 +11,34 @@
  */
 
 :root {
-  /* colors */
+  /* global colors */
+  --white: #fff;
+
+  /* johnny colors */
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
   --background-color: white;
   --light-color: #eee;
   --dark-color: #ccc;
-  --text-color: black;
+  --johnny-text-color: #2e2e2e;;
+  --johnny-shipping-color: #e7e6e6;
+  --johnny-footer-color: #f4f4f4;
 
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback;
-  --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  /* johnny fonts */
+  --johnny-body-font: roboto, roboto-fallback;
+  --johnny-heading-font: the-seasons, sans-serif;
+  --johnny-secondary-font: minerva-modern, sans-serif;
+ 
+  /* lilly colors */
+  --lilly-shipping-color: #f0f0f0;
+  --lilly-pink:#e00083;
+  --lilly-dark-color: #19193d;
+  --lilly-secondary-color: #4f4f4f;
+
+  /* lilly fonts */
+  --lilly-body-font: gotham-htf;
+  --lilly-heading-font: crimson-text;
+
 
   /* body sizes */
   --body-font-size-m: 22px;
