@@ -15,17 +15,14 @@
   --white: #fff;
 
   /* johnny colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
-  --background-color: white;
-  --light-color: #eee;
-  --dark-color: #ccc;
+  --johnny-dark-color: #444;
+  --johnny-gc: #C9DCF1;
   --johnny-text-color: #2e2e2e;;
   --johnny-shipping-color: #e7e6e6;
   --johnny-footer-color: #f4f4f4;
 
   /* johnny fonts */
-  --johnny-body-font: roboto, roboto-fallback;
+  --johnny-body-font: avenir;
   --johnny-heading-font: the-seasons, sans-serif;
   --johnny-secondary-font: minerva-modern, sans-serif;
  
@@ -149,27 +146,26 @@ a:hover {
 
 /* buttons */
 a.button:any-link, button {
-  font-family: var(--body-font-family);
+  font-family: var(--johnny-body-font);
   display: inline-block;
   box-sizing: border-box;
-  text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
   text-align: center;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
+  color: var(--johnny-text-color);
+  text-decoration: underline;
+  text-underline-offset: 0.1875rem;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  line-height: 1.375rem;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--link-hover-color);
   cursor: pointer;
 }
 

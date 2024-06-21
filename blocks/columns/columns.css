@@ -5,10 +5,12 @@
 
 .columns img {
   width: 100%;
+  display: block;
 }
 
 .columns > div > div {
   order: 1;
+  position: relative;
 }
 
 .columns > div > .columns-img-col {
@@ -17,6 +19,26 @@
 
 .columns > div > .columns-img-col img {
   display: block;
+}
+
+.columns > div p.button-container {
+	position: absolute;
+	bottom: 24px;
+	right: 24px;
+}
+
+.columns > div > div p {
+	margin: 0;
+}
+
+.columns > div p.button-container a {
+	color: var(--white);
+	display: block;
+	width: fit-content;
+}
+
+.columns > div p.button-container a:hover {
+	text-decoration: none;
 }
 
 @media (width >= 900px) {
