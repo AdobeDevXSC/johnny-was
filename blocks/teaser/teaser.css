@@ -1,3 +1,4 @@
+/* global teaser styles */
 main .section.teaser-container {
 	padding: 0;
 }
@@ -19,34 +20,25 @@ main .section.teaser-container > div {
 	object-fit: cover;
 }
 
-/* short teaser styles */
-.teaser.short {
-	margin-bottom: 20px;
-}
 
-/* teasers with background colors */
-main .section.background-color .teaser {
-	background-color: var(--johnny-gc);
-
-}
-
-main .section.center-text .teaser {
-	padding: 40px;
-}
-
-main .section.center-text .teaser h2 {
-	color: var(--johnny-text-color);
-    font-family: var(--johnny-secondary-font);
-	text-transform: uppercase;
-	font-weight: 400;
-	font-size: 3rem;
-    line-height: 3.75rem;
-    letter-spacing: 3.6px;
-    margin: 0;
+main .section .teaser p,
+main .section .teaser h2,
+main .section .teaser h5 {
 	text-align: center;
 }
 
-main .section.center-text .teaser h5 {
+main .section .teaser h2 {
+	color: var(--johnny-text-color);
+    font-family: var(--johnny-heading-font);
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 3.4375rem;
+    line-height: 3.75rem;
+    letter-spacing: 3.6px;
+    margin: 0;
+}
+
+main .section .teaser h5 {
 	color: var(--johnny-text-color);
     font-family: var(--johnny-body-font);
 	text-transform: uppercase;
@@ -55,21 +47,20 @@ main .section.center-text .teaser h5 {
     line-height: 1.5rem;
 	letter-spacing: 0.05em;
     margin: 0 0 16px;
-	text-align: center;
 }
 
-main .section.center-text .teaser p {
+main .section .teaser p:not(.button-container) {
 	font-family: var(--johnny-body-font);
 	color: var(--johnny-text-color);
 	font-size: 0.875rem;
-	font-weight: 400;
+	font-weight: 300;
 	letter-spacing: 0.05em;
     line-height: 1.375rem;
-	margin: 0;
 	text-align: center;
+	margin-bottom: 16px;
 }
 
-main .section.center-text .teaser p:not(.button-container) a {
+main .section.understated .teaser p:not(.button-container) a {
 	font-family: var(--johnny-body-font);
 	color: var(--johnny-dark-color);
 	font-size: 0.875rem;
@@ -82,14 +73,120 @@ main .section.center-text .teaser p:not(.button-container) a {
     text-underline-offset: 0.1875rem;
 }
 
-main .section.center-text .teaser p:not(.button-container) a:hover {
+main .section .teaser p { 
+	margin: 0;
+}
+
+main .section .teaser p.button-container a {
+	display: block;
+}
+
+main .section .teaser p:not(.button-container) a:hover,
+main .section .teaser p.button-container a:hover {
 	text-decoration: none;
 }
 
-main .section.center-text:not(.background-color) .teaser p {
-	margin-bottom: 16px;
+
+
+/* short teaser styles */
+.teaser.short {
+	margin-bottom: 20px;
 }
 
-main .section.background-color .teaser p:first-of-type {
-	margin-bottom: 16px;
+
+
+/* teasers with background color */
+main .section.background-color .teaser {
+	background-color: var(--johnny-gc);
+}
+
+main .section.background-color .teaser h2 {
+    font-family: var(--johnny-secondary-font);
+	font-size: 3rem;
+}
+
+
+
+/* text-only teaser styles */
+main .section.text-only .teaser {
+	padding: 40px;
+}
+
+main .section.text-only:not(.section.background-color) h2 {
+	margin: 0 0 32px;
+}
+
+main .section.text-only:not(.section.background-color) .teaser p.button-container {
+	margin: 16px 0 2.25rem;
+}
+
+
+
+/* center text teaser styles */
+main .section.center-text.text-only .teaser > div > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
+/* left & right text teaser styles */
+
+main .section.text-left .teaser,
+main .section.text-right .teaser {
+	position: relative;
+}
+
+main .section.text-left .teaser > div:nth-of-type(3),
+main .section.text-right .teaser > div:nth-of-type(3) {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 5rem;
+	max-width: 28.2%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main .section.text-left .teaser > div:nth-of-type(3) p:not(.button-container),
+main .section.text-right .teaser > div:nth-of-type(3) p:not(.button-container) {
+	margin: 48px auto;
+	width: 70%;
+}
+
+/* left styles */
+main .section.text-left .teaser > div:nth-of-type(3) {
+	left: 0;
+}
+
+/* right styles */
+main .section.text-right .teaser > div:nth-of-type(3) {
+	right: 0;
+}
+
+
+
+/* understated teaser styles */
+main .section.understated .teaser > div > div {
+	padding-bottom: 16px;
+}
+
+main .section.understated .teaser h5 {
+	margin-top: 16px;
+}
+
+main .section.understated .teaser p {
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.78px;
+}
+
+
+/* shipping teaser */
+main .section.shipping .teaser p,
+main .section.shipping .teaser h5 {
+	text-align: left;
+	margin: 0 0 16px;
 }
