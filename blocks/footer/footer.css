@@ -174,15 +174,22 @@ footer .footer > div > .section:last-of-type > div > ul > li img {
 	}
 }
 
-
 @media (width <= 1300px) {
 	footer .footer > div > div.section:last-of-type > div > ul {
 		grid-row: 2;
-		width: 45%;
+		width: 62%;
 	}
 
 	footer .footer > div > div.section:last-of-type > div > p { 
 		margin-bottom: 16px;
+	}
+}
+
+@media (width <= 1024px) {
+	footer .footer > div > div.section:last-of-type > div > ul > li {
+		white-space: nowrap;
+		padding: 0;
+		width: fit-content;
 	}
 }
 
