@@ -1,9 +1,12 @@
-# Door Opener Project Boilerplate 
+# Johnny Was -- Edge Delivery Document-Based Authoring Demo
+Mockup of Johnny Was landing page and Lilly Pulitzer page to showcase how efficient development in Edge Delivery Services is.
 
+Johnny Was: https://www.johnnywas.com/ 
+Lilly Pulitzer: https://www.lillypulitzer.com/
 
 ## Environments
-- Preview: Preview: https://main--johnny-was--AdobeDevXSC.hlx.page/
-- Live: https://main--johnny-was--AdobeDevXSC.hlx.live/
+Preview: https://main--johnny-was--AdobeDevXSC.hlx.page/
+Live: https://main--johnny-was--AdobeDevXSC.hlx.live/
 
 ## Installation
 
