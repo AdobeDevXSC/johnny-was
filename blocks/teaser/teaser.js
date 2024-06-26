@@ -7,7 +7,7 @@ export default function decorate(block) {
 	function toggleImage() {
 		const mobileImage = blockImages[1];
 		const desktopImage = blockImages[0];
-		console.log(desktopImage.closest('div'), mobileImage.closest('div'))
+		
 		if(isDesktop.matches){
 			mobileImage.closest('div').className = 'hidden';
 			desktopImage.closest('div').className = '';
