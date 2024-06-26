@@ -50,6 +50,7 @@ footer .footer > div > div > div > ul:nth-of-type(2) {
 
 footer .footer > div > div > div > ul:nth-of-type(2) li {
 	grid-column: span 1;
+	margin-bottom: 8px;
 }
 
 footer .footer > div > div > div > ul:nth-of-type(2) li:first-of-type {
@@ -97,7 +98,7 @@ footer .footer > div > div.section:first-of-type > div > ul > li:first-of-type {
 }
 
 /* copyright section */
-footer .footer > div > div.section:last-of-type > div {
+footer .footer > div > .section:last-of-type > div {
 	display: grid;
 	grid-template-columns: repeat(2, auto);
 	justify-content: flex-start;
@@ -105,7 +106,7 @@ footer .footer > div > div.section:last-of-type > div {
 	margin-top: 16px;
 }
 
-footer .footer > div > div.section:last-of-type > div > p { 
+footer .footer > div > .section:last-of-type > div > p { 
 	font-family: var(--johnny-body-font);
 	border: none;
 	text-transform: none;
@@ -116,12 +117,12 @@ footer .footer > div > div.section:last-of-type > div > p {
 	margin-right: 24px;
 }
 
-footer .footer > div > div.section:last-of-type > div > ul {
+footer .footer > div > .section:last-of-type > div > ul {
 	grid-row: 2;
 	margin-bottom: 1rem;
 }
 
-footer .footer > div > div.section:last-of-type > div > ul > li { 
+footer .footer > div > .section:last-of-type > div > ul > li { 
 	margin: 10px 0 16px 0;
 	font-size: 0.625rem;
     letter-spacing: 0.05em;
@@ -131,11 +132,11 @@ footer .footer > div > div.section:last-of-type > div > ul > li {
     text-transform: uppercase;
 }
 
-footer .footer > div > div.section:last-of-type > div > ul > li > a:hover {
+footer .footer > div > .section:last-of-type > div > ul > li > a:hover {
 	text-decoration: underline;
 }
 
-footer .footer > div > div.section:last-of-type > div > ul > li img {
+footer .footer > div > .section:last-of-type > div > ul > li img {
 	display: inline-block;
 	width: 30px;
 	height: auto;
@@ -144,11 +145,11 @@ footer .footer > div > div.section:last-of-type > div > ul > li img {
 
 
 @media (width >= 1024px) {
-	footer .footer > div > div.section:last-of-type > div > ul {
+	footer .footer > div > .section:last-of-type > div > ul {
 		grid-row: 1;
 	}
 
-	footer .footer > div > div.section:last-of-type > div > ul {
+	footer .footer > div > .section:last-of-type > div > ul {
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
