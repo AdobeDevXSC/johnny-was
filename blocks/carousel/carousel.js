@@ -103,7 +103,7 @@ async function fetchJson(link) {
 let carouselId = 0;
 export default async function decorate(block) {
   carouselId += 1;
-  const isJSONCarousel = block.classList.contains('cards');
+  const isJSONCarousel = block.classList.contains('is-json');
 
   block.setAttribute('id', `carousel-${carouselId}`);
   const rows = block.querySelectorAll(':scope > div');
@@ -138,12 +138,14 @@ export default async function decorate(block) {
 
     container.append(slideNavButtons);
   }
-
-  const isImageCards = block.classList.contains('image-cards');
+  const link = block.querySelector('a');
+  const serviceWrapper = link.closest('.carousel > div');
+  console.log(serviceWrapper)
+  serviceWrapper.style.display = 'none';
 
   if(isJSONCarousel){  
-	const link = block.querySelector('a');
   	const cardData = await fetchJson(link);
+
 	cardData.forEach((card, idx) => {
 		const picture = createOptimizedPicture(card.image, card.title, false, [{ width: 320 }]);
 		picture.lastElementChild.width = '320';
@@ -153,33 +155,19 @@ export default async function decorate(block) {
 		createdSlide.dataset.slideIndex = idx;
 		createdSlide.setAttribute('id', `carousel-${carouselId}-slide-${idx}`);
 		createdSlide.classList.add('carousel-slide');
-		if(isImageCards){
-			createdSlide.innerHTML = `
-				<div class="cards-card-image">
-					${picture.outerHTML}
-				</div>
-				<a href="${card.url}" aria-label="${card['anchor-text']}" title="${card['anchor-text']}">
-					<div class="cards-card-body">
-						<h5>${card.title}</h5>
-						<p>${card.copy}</p>
-					</div>
-				</a>`
-		} else {
+		if(isJSONCarousel){
 		createdSlide.innerHTML = `
-        <div class="cards-card-image">
-          ${picture.outerHTML}
-        </div>
+		 <a href="${card.url}" aria-label="${card['anchor-text']}" title="${card['anchor-text']}" class="button">
+			<div class="cards-card-image">
+			${picture.outerHTML}
+			</div>
+        </a>
         <div class="cards-card-body">
-          <h5>${card.title}</h5>
-		  <p>${card.copy}</p>
-          <p class="button-container">
-            <a href="${card.url}" aria-label="${card['anchor-text']}" title="${card['anchor-text']}" class="button">
-              Read More 
-              <span class="card-arrow">
-                <img class="icon" src="/icons/chevron-down.svg" />
-              </span>
-            </a>
-          </p>
+		  <a href="${card.url}" aria-label="${card['anchor-text']}" title="${card['anchor-text']}" class="button">
+          	<h5>${card.title}</h5>
+		  </a>
+		  <p>${card.price}</p>
+		  <p>${card.sale}</p>
         </div>
       `;}
 

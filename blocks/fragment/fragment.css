@@ -324,6 +324,7 @@ main .section.shipping.lilly .teaser p a {
 	font-weight: 500;
 	color: var(--lilly-secondary-color);
 	text-underline-offset: unset;
+	text-transform: lowercase;
 }
 
 main .section.shipping.lilly .teaser img {
