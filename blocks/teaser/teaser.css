@@ -164,6 +164,30 @@ main .section.text-right .teaser > div:nth-of-type(3) {
 	right: 0;
 }
 
+
+
+/* text under styles */
+main .section.text-under .teaser > div:nth-of-type(2) {
+	margin: 64px 2.56rem 0;
+    padding: 0 0.75rem;
+}
+
+main .section.text-under .teaser > div:nth-of-type(2) h2 {
+	margin-bottom: 32px;
+}
+
+
+/* mobile */
+@media (width <= 1024px){
+	main .section.text-under .teaser > div:nth-of-type(2) {
+		margin-top: 48px;
+	}
+
+	main .section.text-under .teaser > div:nth-of-type(2) h2 {
+		margin-bottom: 24px;
+	}
+}
+
 @media (width <= 767px){
 	main .section.text-left .teaser > div:nth-of-type(3),
 	main .section.text-right .teaser > div:nth-of-type(3) {
@@ -182,8 +206,8 @@ main .section.text-right .teaser > div:nth-of-type(3) {
 		line-height: 40px;
 	}
 
-	.teaser a {
-		display: block;
+	main .section.text-under .teaser > div:nth-of-type(2) {
+		margin-top: 24px;
 	}
 }
 
@@ -223,4 +247,16 @@ main .section.shipping .teaser h5 {
 main .section.shipping .teaser p > picture {
 	display: block;
 	margin-top: -1rem;
+}
+
+main .section.shipping .teaser p > picture > img {
+	display: block;
+	width: 3.125rem;
+	margin-right: 16px;
+}
+
+@media(width <= 767px) {
+	.fragment-wrapper .teaser > div > div {
+		padding: 40px 28px 8px;
+	}
 }
